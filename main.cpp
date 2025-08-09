@@ -116,7 +116,7 @@ void FileOpenContext(void* UserData, const char* const Files[], int FileAmount){
 
 int main(){
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS | SDL_INIT_AUDIO);
-    window MainWindow("ZNNColorMatcher", 500, 450);
+    window MainWindow("ImageToColorGenerator", 500, 450);
 
     GlobalRenderer = MainWindow.rendererOBJ;
 
