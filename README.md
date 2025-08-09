@@ -6,7 +6,7 @@ This project is licensed under the **ZNN-ImageToColorGenerator License v1.0 (Aug
 
 # 🌸 ZNN Image to color generator 🌸
 *A simple, fast, image to similar color generator*
--# Powered by ZNN-CGM (Elythra)
+- Powered by ZNN-CGM (Elythra)
 
 ### 🪟 Windows Builds:
 - Available in the [Releases](https://github.com/zoriun/ZNN-ImageToColorGenerator/releases) tab  
