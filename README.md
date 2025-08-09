@@ -1,3 +1,9 @@
+This project is licensed under the **ZNN-ImageToColorGenerator License v1.0 (August 2025)**.
+
+- ✅ **Allowed**: Use, copy, modify, and redistribute for **non-commercial purposes**.  
+- ❌ **Not Allowed**: Selling the software or using it in products/services for monetary gain.  
+- 🏷 **Attribution Required**: You must credit the original author in any public release: 
+
 # 🌸 ZNN Image to color generator 🌸
 *A simple, fast, image to similar color generator*
 -# Powered by ZNN-CGM (Elythra)
