@@ -1,3 +1,14 @@
+// ZNN-ImageToColorGenerator
+// Copyright (C) 2025 zoriun
+// 
+// Licensed under the ZNN-ImageToColorGenerator License v1.0 (February 2025):
+// - You may use, copy, modify, and redistribute this software for non-commercial purposes.
+// - You must provide visible credit to the original author:
+//   Original project by zoriun — https://github.com/zoriun/ZNN-ImageToColorGenerator
+// - You may not sell this software or use it in products/services for monetary gain.
+// 
+// Full license text is available in the LICENSE file included with this source code.
+
 #include <iostream>
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
@@ -27,6 +38,8 @@ SDL_Renderer* GlobalRenderer;
 bool RPriority = true;
 bool GPriority = true;
 bool BPriority = true;
+
+float SIZE_SCALE = 0.2;
 
 void FILEINITFORMODEL(){
     Uint64 TotalR = 0, TotalG = 0, TotalB = 0;
@@ -152,9 +165,11 @@ int main(){
         ColorSuggestionFour.render(MainWindow.rendererOBJ, RandomShade4[0]*255, RandomShade4[1]*255, RandomShade4[2]*255);
 
         AddButton.render(MainWindow.rendererOBJ);
-        
-        SDL_FRect ACFTRect = {100, 225-75, 150, 150};
-        SDL_RenderTexture(MainWindow.rendererOBJ, ActiveChosenFileTexture, NULL, &ACFTRect);
+
+        if (ActiveChosenFileTexture != NULL){
+            SDL_FRect ACFTRect = {(float)100-(ActiveChosenFileTexture->w*SIZE_SCALE)/4, (float)225-((ActiveChosenFileTexture->h*SIZE_SCALE)/2), (float)ActiveChosenFileTexture->w*SIZE_SCALE, (float)ActiveChosenFileTexture->h*SIZE_SCALE};
+            SDL_RenderTexture(MainWindow.rendererOBJ, ActiveChosenFileTexture, NULL, &ACFTRect);
+        }
 
         RChannelButton.render(MainWindow.rendererOBJ);
         GChannelButton.render(MainWindow.rendererOBJ);
