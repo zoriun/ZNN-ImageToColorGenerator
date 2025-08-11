@@ -131,6 +131,8 @@ int main(){
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS | SDL_INIT_AUDIO);
     window MainWindow("ImageToColorGenerator", 500, 450);
 
+    std::vector<SDL_Texture*> Textures;
+
     GlobalRenderer = MainWindow.rendererOBJ;
 
     Rectangle ColorSuggestionOne(300, 50, 50, 50);
@@ -147,6 +149,15 @@ int main(){
 
     SDL_Texture* BActive = IMG_LoadTexture(MainWindow.rendererOBJ, "Textures/BActive.png");
     SDL_Texture* BInactive = IMG_LoadTexture(MainWindow.rendererOBJ, "Textures/BInactive.png");
+
+    Textures.push_back(AddButtonTexture);
+    Textures.push_back(RActive);
+    Textures.push_back(RInactive);
+    Textures.push_back(GActive);
+    Textures.push_back(GInactive);
+    Textures.push_back(BActive);
+    Textures.push_back(BInactive);
+    Textures.push_back(ActiveChosenFileTexture);
 
     TextureButton AddButton(20, 400, 32, 32, AddButtonTexture);
 
@@ -228,6 +239,12 @@ int main(){
         SDL_RenderPresent(MainWindow.rendererOBJ);
     }
     
+    for (int i = 0; i < Textures.size(); i++){
+        if (Textures[i] != nullptr){
+            SDL_DestroyTexture(Textures[i]);
+        }
+    }
+
     MainWindow.CleanUp();
     SDL_Quit();
 };
