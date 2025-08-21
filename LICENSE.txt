@@ -14,7 +14,7 @@ The following restrictions apply:
 1. Attribution Required — Any redistribution or public use of the Software,
    in source or binary form, must include clear and visible credit to the
    original author:
-   Original project by zoriun — https://github.com/zoriun/ZNN-ImageToColorGenerator
+   Original project by yeahzoriun — https://github.com/yeahzoriun/ZNN-ImageToColorGenerator
 
 2. No Commercial Use — The Software, in whole or in part, may not be sold,
    licensed for a fee, or used in any product or service intended for
