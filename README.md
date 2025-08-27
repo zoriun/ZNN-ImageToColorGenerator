@@ -35,3 +35,7 @@ This project is licensed under the **ZNN-ImageToColorGenerator License v1.0 (Aug
 
 # ⚡️-*SUPPORT!:*
 - Add @yeahzoriun on discord for app support, feedback, alternative inquiries, etc.
+
+# HOW IT WORKS! (for the geeks)
+in simple terms i use rd to init weights and starting values, i pass in training data (thats crafted from averaging the pixel colors in the user's imported image then generating random shades in that range) and then train the neurons until the error is closer to 0, then i generate four shades with a gen function and display those.
+super basic, but keep in mind this is my first time doing anything AI related & i lost motivation pretty quick.
